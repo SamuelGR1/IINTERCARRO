@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="1394911.png" />
+    <None Remove="encenderr.png" />
+    <None Remove="iconoacelera.png" />
+    <None Remove="pause-button.png" />
+    <None Remove="play.png" />
+    <None Remove="Red-Off-On-Red-Power-Button-Power-296626.png" />
+    <None Remove="stop.png" />
+    <None Remove="volante.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Drawable\1394911.png" />
+    <Resource Include="Resources\Drawable\iconoacelera.png" />
+    <Resource Include="Resources\Drawable\pause-button.png" />
+    <Resource Include="Resources\Drawable\play.png" />
+    <Resource Include="Resources\Drawable\encenderr.png" />
+    <Resource Include="Resources\Drawable\Red-Off-On-Red-Power-Button-Power-296626.png" />
+    <Resource Include="Resources\Drawable\volante.png" />
+    <Resource Include="stop.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,83 @@
+﻿<Window x:Name="frmCarro" x:Class="IINTERCARRO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IINTERCARRO"
+        mc:Ignorable="d"  
+       
+        Title="INTERFA_CARRO" Height="660" Width="1141" Background="#FF293473" Foreground="White">
+    <Grid x:Name="FRMcarro" Margin="0,0,55,25" Background="#FFF5FFFC" HorizontalAlignment="Right" Width="1027">
+
+
+
+
+        <Image HorizontalAlignment="Left" Height="205" VerticalAlignment="Top" Width="202" Source="/Resources/Drawable/iconoacelera.png" Stretch="Fill" Margin="412,51,0,0"/>
+
+
+
+        <Image Source="/Resources/Drawable/volante.png" Visibility="Visible" SnapsToDevicePixels="True" StretchDirection="Both" Stretch="Fill" Margin="114,-28,409,226"/>
+
+
+
+        <Image HorizontalAlignment="Left" Height="338" Margin="265,298,0,0" VerticalAlignment="Top" Width="349" Source="/Resources/Drawable/1394911.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.202"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.535"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Button x:Name="buttonEncender" Content="Encender Carro"
+                HorizontalAlignment="Left" Margin="84,68,0,0"
+                VerticalAlignment="Top" Click="buttonEncender_Click" Width="99" FontWeight="Bold" Height="30" Foreground="#FFEFEFEF" ScrollViewer.CanContentScroll="True" UseLayoutRounding="True" Background="#FF0E79CC"/>
+        <Button x:Name="Acelerar_" Content="Acelerar" HorizontalAlignment="Left" Margin="513,493,0,0" VerticalAlignment="Top" Width="98" Click="Acelerar__Click" FontWeight="Bold" Height="30" Background="#FF9CA4E4"/>
+        <Button x:Name="buton_bocinar" Content="Bocina" HorizontalAlignment="Left" Margin="326,170,0,0" VerticalAlignment="Top" Width="98" Click="buton_bocinar_Click" FontWeight="Bold" Height="25"/>
+        <Button x:Name="ButtonFrenado" Content="Frenar" HorizontalAlignment="Left" Margin="276,526,0,0" VerticalAlignment="Top" Width="99" Click="ButtonFrenado_Click" FontWeight="Bold" Height="30" Background="#FFE67449"/>
+        <Button x:Name="ButtonDesacelerar" Content="Desacelerar" HorizontalAlignment="Left" Margin="276,473,0,0" VerticalAlignment="Top" Width="99" Click="ButtonDesacelerar_Click" FontWeight="Bold" Height="30" Background="#FFE67449"/>
+        <Button x:Name="ButtonApagar" Content="Apagar Carro" HorizontalAlignment="Left" Margin="84,215,0,0" VerticalAlignment="Top" Width="99" Click="ButtonApagar_Click" Background="#FF821717" Foreground="WhiteSmoke" FontWeight="Bold" Height="30"/>
+        <Image HorizontalAlignment="Left" Height="56" Margin="27,202,0,0" VerticalAlignment="Top" Width="62" Source="/Resources/Drawable/Red-Off-On-Red-Power-Button-Power-296626.png"/>
+        <Image HorizontalAlignment="Left" Height="88" Margin="20,51,0,0" VerticalAlignment="Top" Width="66" Source="/Resources/Drawable/encenderr.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="667,138,0,0" TextWrapping="Wrap" Text="Nombre Archivo:" VerticalAlignment="Top" Background="#FF0B80ED" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="TBarchivo" HorizontalAlignment="Left" Margin="784,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <Button x:Name="buttonApertura" Content="Abrir" HorizontalAlignment="Left" Margin="940,140,0,0" VerticalAlignment="Top" Click="buttonApertura_Click"/>
+        <Button x:Name="buttonPlay" Content="" HorizontalAlignment="Left" Margin="715,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="48" Height="40" BorderBrush="{x:Null}" Click="buttonPlay_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.153"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/Drawable/play.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="buttonPause" Content="" HorizontalAlignment="Left" Margin="803,183,0,0" VerticalAlignment="Top" Height="38" Width="45" BorderBrush="{x:Null}" Click="buttonPause_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/Drawable/pause-button.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="buttonStop" Content="" HorizontalAlignment="Left" Margin="897,182,0,0" VerticalAlignment="Top" Height="39" Width="45" BorderBrush="{x:Null}" Click="buttonStop_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/stop.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="labelEncendido" Content="     " HorizontalAlignment="Left" Margin="84,116,0,0" VerticalAlignment="Top" Background="#FFABC751"/>
+        <Label x:Name="labelApagado" Content="     " HorizontalAlignment="Left" Margin="84,256,0,0" VerticalAlignment="Top" Background="#FFEC8181"/>
+        <Label x:Name="labelAcelerador" Content="     " HorizontalAlignment="Left" Margin="346,232,0,0" VerticalAlignment="Top" Background="#FF1FE446"/>
+        <Label x:Name="labeldesacelerar" Content="     " HorizontalAlignment="Left" Margin="346,264,0,0" VerticalAlignment="Top" Background="#FF130B0B" Foreground="White"/>
+        <Label x:Name="labelFrenado" Content="     " HorizontalAlignment="Left" Margin="346,320,0,0" VerticalAlignment="Top" Foreground="#FF0E040E" Background="#FFC456D0"/>
+        <Label x:Name="labelBocinon" Content="     " HorizontalAlignment="Left" Margin="346,116,0,0" VerticalAlignment="Top" Background="#FF1DA0D8"/>
+
+
+
+    </Grid>
+
+
+
+</Window>
